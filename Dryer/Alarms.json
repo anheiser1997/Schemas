@@ -1,0 +1,80 @@
+{
+	"properties": {
+		"rt": {
+			"description": "The Resource Type.",
+			"items": {
+				"enum": [
+					"x.com.comp.da.alarms"
+				],
+				"maxLength": 64,
+				"type": "string"
+			},
+			"minItems": 1,
+			"uniqueItems": true,
+			"readOnly": true,
+			"type": "array"
+		},
+		"if": {
+			"description": "interface",
+			"items": {
+				"enum": [
+					"oic.if.a",
+					"oic.if.baseline"
+				],
+				"maxLength": 64,
+				"type": "string"
+			},
+			"minItems": 1,
+			"uniqueItems": true,
+			"readOnly": true,
+			"type": "array"
+		},
+		"x.com.comp.da.items": {
+			"description": "Items details",
+			"type": "array",
+			"readOnly": false,
+			"items": {
+				"type": "object",
+				"properties": {
+					"x.com.comp.da.id": {
+						"description": "Id details",
+						"type": "string",
+						"readOnly": false
+					},
+					"x.com.comp.da.alarmType": {
+						"description": "Alarm type",
+						"type": "string",
+						"readOnly": false
+					},
+					"x.com.comp.da.code": {
+						"description": "Alarm code",
+						"type": "string",
+						"readOnly": false
+					},
+					"x.com.comp.da.description": {
+						"description": "Alarm description",
+						"type": "string",
+						"readOnly": false
+					},
+					"x.com.comp.da.state": {
+						"description": "Alarm state",
+						"type": "string",
+						"readOnly": false,
+						"enum": [
+							"created",
+							"deleted",
+							"Created",
+							"Deleted"
+						]
+					},
+					"x.com.comp.da.triggeredTime": {
+						"description": "Alarm Trigger time",
+						"type": "string",
+						"readOnly": false
+					}
+				}
+			}
+		}
+	},
+	"type": "object"
+}
