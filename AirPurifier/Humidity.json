@@ -1,0 +1,50 @@
+{
+    "properties": {
+        "rt": {
+            "description": "The Resource Type.",
+            "items": {
+                "enum": ["x.com.comp.da.humidity"],
+                "maxLength": 64,
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "readOnly": true,
+            "type": "array"
+        },
+        "if": {
+            "description": "interface",
+            "items": {
+                "enum": ["oic.if.a", "oic.if.baseline"],
+                "maxLength": 64,
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "readOnly": true,
+            "type": "array"
+        },
+		"x.com.comp.da.current": {
+			"description": "Current Humidity Details",
+			"type": "string",
+			"readOnly": true,
+			"maximum": "99",
+			"minimum": "0"
+		},
+		"x.com.comp.da.desiredHumdity": {
+			"description": "Humidity desired",
+			"type": "string",
+			"readOnly": false,
+			"maximum": "99",
+			"minimum": "0"
+		},
+		"x.com.comp.da.fivePercentHumidity": {
+			"description": "Detials of Five percent humidity",
+			"type": "string",
+			"readOnly": true,
+			"maximum": "99",
+			"minimum": "0"
+		}
+    },
+    "type": "object"
+}
