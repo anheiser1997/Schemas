@@ -1,0 +1,111 @@
+{
+    "properties": {
+        "rt": {
+            "description": "The Resource Type.",
+            "items": {
+                "enum": ["x.com.comp.da.information"],
+                "maxLength": 64,
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "readOnly": true,
+            "type": "array"
+        },
+        "if": {
+            "description": "interface",
+            "items": {
+                "enum": ["oic.if.a", "oic.if.baseline"],
+                "maxLength": 64,
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "readOnly": true,
+            "type": "array"
+        },
+		"x.com.comp.da.modelNum": {
+            "description": "Model Details",
+            "readOnly": true,
+            "type": "string"
+        },
+		"x.com.comp.da.otnDUID": {
+            "description": "otnDUID Details",
+            "readOnly": true,
+            "type": "string"
+        },
+		"x.com.comp.da.description": {
+            "description": "resource Details",
+            "readOnly": true,
+            "type": "string"
+        },
+		"x.com.comp.da.serialNumber": {
+			"description": "serialNumber details",
+			"type": "string",
+			"readOnly": true
+		},
+		"x.com.comp.da.serialNumberOption": {
+			"description": "serialNumberOption details",
+			"type": "string",
+			"readOnly": true
+		},
+		"x.com.comp.da.versionId": {
+            "description": "Version Id details",
+            "readOnly": false,
+            "type": "string"
+        },
+		"x.com.comp.da.approvedState": {
+            "description": "Approved state details",
+            "readOnly": false,
+            "type": "string"
+        },
+		"x.com.comp.da.userAgreement": {
+            "description": "AGreement details",
+            "items": {
+                "enum": ["true", "false"],
+                "type": "string"
+            },
+            "readOnly": false,
+            "type": "array"
+        },
+		"x.com.comp.da.versions": {
+            "description": "Items details",
+            "type": "array",
+            "readOnly": false,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "x.com.comp.da.id": {
+						"description": "id details",
+						"type": "string",
+						"readOnly": true,
+						"enum": ["0" , "1" , "2"]
+					},
+					"x.com.comp.da.name": {
+						"description": "name details",
+						"type": "string",
+						"readOnly": true
+					},
+					"x.com.comp.da.newVersionAvailable": {
+						"description": "newVersionAvailable details",
+						"type": "boolean",
+						"readOnly": true,
+						"enum": ["false", "true"]
+					},
+					"x.com.comp.da.number": {
+						"description": "number details",
+						"type": "string",
+						"readOnly": true
+					},
+					"x.com.comp.da.type": {
+						"description": "type details",
+						"type": "string",
+						"readOnly": true
+					}
+                }
+            }
+        }
+    },
+    "type": "object"
+}
+
