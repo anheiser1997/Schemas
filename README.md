@@ -1,2 +1,2 @@
-# Schemas-Dryer-
+# Schemas for Devices
 Json Schemas 
